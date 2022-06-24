@@ -1,0 +1,31 @@
+// order by age, in ascending order (smallest values first)
+> db.user.find().sort({age: 1})
+{
+    "_id": ObjectId("5ce45d7606444f199acfba1e"),
+    "name": {given: "Alex", family: "Smith"},
+    "email": "email@example.com",
+    "age": 27
+}
+{
+    _id: ObjectId("5effaa5662679b5af2c58829"),
+    email: “email@example.com”,
+    name: {given: “Jesse”, family: “Xiao”},
+    age: 31
+}
+>
+
+// order by age, in descending order (largest values first)
+> db.user.find().sort({age: -1})
+{
+    _id: ObjectId("5effaa5662679b5af2c58829"),
+    email: “email@example.com”,
+    name: {given: “Jesse”, family: “Xiao”},
+    age: 31
+}
+{
+    "_id": ObjectId("5ce45d7606444f199acfba1e"),
+    "name": {given: "Alex", family: "Smith"},
+    "email": "email@example.com",
+    "age": 27
+}
+>
